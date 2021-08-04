@@ -35,7 +35,7 @@ class BERTDataset:
             "ids": torch.tensor(inputs["input_ids"], dtype=torch.long),
             "mask": torch.tensor(inputs["attention_mask"], dtype=torch.long),
             "token_type_ids": torch.tensor(inputs["token_type_ids"], dtype=torch.long),
-            "targets": torch.tensor(self.targets[idx], dtype=torch.float)
+            "targets": torch.tensor(self.targets[idx], dtype=torch.float),
         }
         return resp
 
@@ -116,3 +116,7 @@ def train_model(fold):
 
 if __name__ == "__main__":
     train_model(fold=0)
+
+
+
+    pass
